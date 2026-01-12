@@ -1,3 +1,5 @@
+/* Main Page Styles */
+
 body {
     background: rgb(64, 65, 150);
     color: rgb(20, 13, 39);
@@ -17,6 +19,8 @@ nav {
     display: flex;
     padding: 10px;
     margin-bottom: 20px;
+    border: 2px solid rgb(26, 53, 95);
+    border-radius: 25px;
 }
 
 h1 {
@@ -25,6 +29,7 @@ h1 {
     color: white;
     flex: 1;
     margin: 0;
+ 
 }
 
 #nav-ul {
@@ -32,6 +37,7 @@ h1 {
     margin: 0;
     padding: 0;
     display: flex;
+    
 }
 
 .nav-li {
@@ -41,7 +47,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* main container area beneath menu */
@@ -49,6 +55,8 @@ main {
     background: rgb(210, 227, 233);
     display: flex;
     margin-top: 20px;
+    border: 2px solid rgb(67, 70, 77);
+    border-radius: 25px;
 }
 
 .sidebar {
@@ -59,6 +67,8 @@ main {
 .sidebar-img {
     width: 300px;
     height: 200px;
+    border: 2px solid black;
+    border-radius: 25px;
 }
 
 .content {
@@ -69,10 +79,99 @@ main {
 /* interests section styles */
 #interests {
     border: 4px rgb(138, 144, 151) ridge;
-    padding: 8px;
+    padding: 10px;
     margin-top: 20px;
+    border: 2px solid rgb(60, 66, 77);
+    border-radius: 25px;
 }
 
 h2, h3 {
     margin: 0px;
+}
+
+
+/* Portfolio styles */
+.content h1 {
+  color: rgb(20, 13, 39);
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #f3f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+  background: #dfe7fe;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: rgb(20, 13, 39);
+}
+
+
+/* Mobile Responsive */
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+  main {
+    height: 58ch;
+    zoom: 1.5;
+    display: grid;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  #all-contents {
+    height: 100ch;
+    margin: 10px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  .sidebar {
+    margin-right: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar-img {
+    width: 100%;
+  }
+
+  p,
+  li {
+    font-size: 15px;
+  }
+
+  .content {
+    align-content: start;
+    justify-content: start;
+  }
+
+  #portfolio {
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  
+
+  
 }
