@@ -28,7 +28,27 @@ $(function () {
 
     // TODO 1 - Enable the Grid
     // toggleGrid();
+    createPlatform(50,700,250,15); // beginning platform
+    createPlatform(300, 600, 30, 140); //first spire
+    createPlatform(500,485,80,255); //second spire
+    createPlatform(725,400,150,30); //first landing pad
+    createPlatform(860,300,15,100); //wall
+    createPlatform(500,290,100,25); // second landing
+    createPlatform(725,200,150,15); // toppest landing pad
+    createPlatform(1100,600,200,15); //landing pad
 
+    createCollectable("database", 520, 450, 0, 0);
+    createCollectable("database", 520, 250, 0, 0);
+    createCollectable("database", 800, 160, 0, 0);
+    createCollectable("database", 1180, 560, 0, 0);
+
+    createCannon("left", 675, 50)
+    createCannon("bottom", 350, 600)
+    createCannon("bottom", 620, 600)
+    createCannon("top", 1050, 600)
+
+
+    // "database", "diamond", "grace", "kennedi", "max", and "steve"
 
     // TODO 2 - Create Platforms
 
