@@ -27,21 +27,25 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    // toggleGrid();
+    toggleGrid();
+    // x, y, width, height, color, minX, maxX, speed, minY, maxY, speedY
     createPlatform(50,700,250,15); // beginning platform
     createPlatform(300, 600, 30, 140); //first spire
+    createBadPlatform(330, 600, 30, 15, "red"); //first spire KILLER
     createPlatform(500,485,80,255); //second spire
     createPlatform(725,400,150,30); //first landing pad
-    createPlatform(860,300,15,100); //wall
+    createBadPlatform(860,300,15,100, "red"); //wall
     createPlatform(500,290,100,25); // second landing
     createPlatform(725,200,150,15); // toppest landing pad
-    createPlatform(1100,600,200,15); //landing pad
+    createPlatform(1100,600,120,15, "gray", 1100, 1200, 2); //landing pad
 
-    createCollectable("database", 520, 450, 0, 0);
-    createCollectable("database", 520, 250, 0, 0);
-    createCollectable("database", 800, 160, 0, 0);
-    createCollectable("database", 1180, 560, 0, 0);
+    // type, x, y, gravity, bounce, minX, maxX, speed
+    createCollectable("database", 520, 450, 0, 0); // 1
+    createCollectable("database", 520, 250, 0, 0); // 2
+    createCollectable("database", 800, 160, 0, 0); //3 
+    createCollectable("database", 1100, 560, 0, 0, 1150, 1250, 2); //4
 
+    // wallLocation, position, timeBetweenShots, width, height
     createCannon("left", 675, 50)
     createCannon("bottom", 350, 600)
     createCannon("bottom", 620, 600)
