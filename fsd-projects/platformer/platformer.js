@@ -46,7 +46,7 @@ $(function () {
     createCollectable("database", 1100, 560, 0, 0, 1150, 1250, 2); //4
 
     // wallLocation, position, timeBetweenShots, width, height
-    createCannon("left", 675, 50)
+    createCannon("left", 675, 1)
     createCannon("bottom", 350, 600)
     createCannon("bottom", 620, 600)
     createCannon("top", 1050, 600)

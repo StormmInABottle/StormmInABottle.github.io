@@ -1,0 +1,9 @@
+.board {
+ background-image: url("paper.gif");
+ background-color: #4c4c63;
+}
+
+p {
+    justify-self: end;
+    font-size: 20px;
+  }
