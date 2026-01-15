@@ -5,6 +5,7 @@
     <title>Bouncing Box</title>
     <script src="jquery.min.js"></script>
     <link rel="stylesheet" href="boxstyle.css" />
+    <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/a/ACg8ocL0MZybHqw-9JvEsaeuWJxAlt7qPTzSBgd7Me4ZCLzK_NIEq89b=s396-c-no">
     <style>
       .box {
         width: 70px;
@@ -44,8 +45,8 @@
 
         var box = jQuery(".box"); // reference to the HTML .box element
         var board = jQuery(".board"); // reference to the HTML .board element
-        var boardWidth = board.width(); // the maximum X-Coordinate of the screen
-        var boardHeight = jQuery(window).height();
+        var boardWidth = board.width() - 70; // the maximum X-Coordinate of the screen
+        var boardHeight = jQuery(window).height() - 70;
         
 
         // update the boardWidth variable when the window is resized
@@ -98,19 +99,22 @@
         positionY += speedY
         
 
-        if ((positionX+70) >= boardWidth) {
+        if ((positionX) > boardWidth) {
           speedX *= -1
+          positionX = boardWidth
         }
-        else if (positionX <= 0) {
+        else if (positionX < 0) {
           speedX *= -1
+          positionX = 70
         }
-        else if ((positionY+70) >= boardHeight) {
+        else if ((positionY) > boardHeight) {
           speedY *= -1
+          positionY = boardHeight 
         }
-        else if (positionY <= 0) {
+        else if (positionY < 0) {
           speedY *= -1
+          positionY = 70
         }
-
           
         }
 
@@ -127,8 +131,8 @@
             positionY = positionY
                       }
           else {
-            positionX = Math.random() * boardWidth;
-            positionY = Math.random() * boardHeight;
+            positionX = Math.random() * (boardWidth - 50);
+            positionY = Math.random() * (boardHeight -50);
 
           }
           changeBoxText(points);

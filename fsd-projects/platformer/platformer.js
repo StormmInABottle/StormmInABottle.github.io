@@ -27,7 +27,7 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    toggleGrid();
+    // toggleGrid();
     // x, y, width, height, color, minX, maxX, speed, minY, maxY, speedY
     createPlatform(50,700,250,15); // beginning platform
     createPlatform(300, 600, 30, 140); //first spire
