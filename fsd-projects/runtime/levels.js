@@ -1,7 +1,7 @@
 // === LEVELS DEFINITIONS ===
 // TODOs 7, 11, and 12 will require changes to this section
 const LEVELS = [
-  {
+  { 
     name: "Level 1",
     speed: 2,
     gameObjects: [
