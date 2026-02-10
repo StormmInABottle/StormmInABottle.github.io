@@ -132,6 +132,7 @@ function createProjectile() {
     y: player.y + player.height / 2 - projectileBaseSize / 2 - 1,
     width: projectileBaseSize,
     height: projectileBaseSize,
+    projectileDamage: 1
   };
   // decide flicker direction based on base size and min/max sizes
   if (projectileBaseSize <= projectileMinSize) {
@@ -157,8 +158,9 @@ function updateProjectiles() {
 
 function handleProjectileObjectCollision(projectileIndex, gameObjectIndex) {
   // Mark to remove the projectile and possibly the object it hit
-  projectiles[projectileIndex].toRemove = true;
-
+  const projectile = projectiles[projectileIndex];
+  projectile.toRemove = true;
+  
   gameObjects[gameObjectIndex].hp -= projectileDamage;
   if (gameObjects[gameObjectIndex].hp === 0) {
     gameObjects[gameObjectIndex].toRemove = true;
@@ -173,8 +175,7 @@ function isCollidingWithProjectile(gameObject, projectile) {
     projectile.x - projectile.width / 2 < gameObject.x + gameObject.hitWidth &&
     projectile.x + projectile.width / 2 > gameObject.x &&
     projectile.y - projectile.height / 2 < gameObject.y &&
-    projectile.y + projectile.height / 2 >
-      gameObject.y - gameObject.hitHeight &&
+    projectile.y + projectile.height / 2 > gameObject.y - gameObject.hitHeight &&
     gameObject.hp > 0
   );
 }
