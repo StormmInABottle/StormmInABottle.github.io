@@ -13,11 +13,11 @@ const groundHeight = 50; // Height of the ground
 // Change these to change the HUD, including health bar colors and sizes
 const HUD_SETTINGS = {
   textColor: "white",
-  textFont: "20px Arial",
-  levelPosition: { x: 20, y: 30 },
-  scorePosition: { x: 200, y: 30 },
-  healthBarPosition: { x: 400, y: 15 },
-  healthBarSize: { width: 300, height: 25 },
+  textFont: "40px Arial",
+  levelPosition: { x: 225, y: 500 },
+  scorePosition: { x: 550, y: 500 },
+  healthBarPosition: { x: 900, y: 460 },
+  healthBarSize: { width: 300, height: 50 },
   healthBarBorderColor: "black",
   healthBarFillColor: "green",
   healthBarBackgroundColor: "darkred",

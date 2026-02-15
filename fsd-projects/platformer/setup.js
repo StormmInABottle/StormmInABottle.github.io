@@ -92,6 +92,7 @@ let ctx;
 // setup function variable
 let setup;
 
+
 let halleImage;
 let animationDetails = {};
 
