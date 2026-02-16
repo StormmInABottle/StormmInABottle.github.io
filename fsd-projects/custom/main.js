@@ -140,31 +140,41 @@ function main() {
 
     // everytime u eat a heart u get a point
     scoreText.onUpdate(() => {
-        scoreText.text = `Score: ${score}`        
+        scoreText.text = `Score: ${score}`
+        console.log(dragging)        
     })
 
     onUpdate("heart", () => {
         if (dragging === true) {
-            var hearts = get("heart")
-            hearts.forEach((heart) => {
-                heart.pos = mousePos()
-                heart.pos.x -= 25
-                heart.pos.y -= 65
-            })
+            if (isMouseDown()) {
+                var hearts = get("heart")
+                hearts.forEach((heart) => {
+                    heart.pos = mousePos()
+                    heart.pos.x -= 25
+                    heart.pos.y -= 65
+                })
+            } 
+            else {
+                dragging = false
+            }
+            
         }
     })
 
     // detect collision
     onHoverUpdate("heart", () => {
-        // console.log("hovering")
-        if (isMouseDown()) {
-            dragging = true
-        }
-        else {
+        console.log("hovering")
+        if (!isMouseDown()) {
+            console.log("not mouse down")
             dragging = false
         }
-    })
+        else {
+            console.log("mouse is down")
+            dragging = true
+        }
 
+    })
+    
 }
 
 
