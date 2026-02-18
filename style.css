@@ -120,7 +120,6 @@ h2, h3 {
 /* Mobile Responsive */
 @media screen and (min-width: 120px) and (max-width: 1080px) {
   main {
-    height: 56ch;
     zoom: 1.5;
     display: grid;
   }
