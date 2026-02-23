@@ -1,4 +1,5 @@
 import kaplay from "https://unpkg.com/kaplay@4000.0.0-alpha.26/dist/kaplay.mjs";
+
 kaplay({
     background: "#56c4b9",
     debugKey: "d",
@@ -167,8 +168,7 @@ function main() {
     });
     
     // fun function for patting the cow <3
-    onHoverUpdate("cow", () => {
-        
+     onHoverUpdate("cow", () => {
         if (isMouseDown() && !dragging && mousePos().y <= 460) {
             patting = true
             pat += 1
