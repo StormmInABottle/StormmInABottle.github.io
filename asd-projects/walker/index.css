@@ -6,16 +6,22 @@ body {
 #board {
   width: 440px;
   height: 440px;
-  border: 1px solid white;
-  background-color: black;
+  border: 1px solid rgb(241, 237, 237);
+  background-color: rgb(4, 0, 27);
   position: relative;
 }
 
-#gameItem {
-  background-color: teal;
+#walker {
+  background-color: rgb(143, 139, 139);
   width: 50px;
   height: 50px;
   position: absolute;
 /*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
 /*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
+}
+
+#instructions {
+  color:rgb(235, 180, 236);
+  font-size: x-large; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
