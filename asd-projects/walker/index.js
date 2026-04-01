@@ -141,6 +141,7 @@ function runProgram(){
       walker.y -= walker.speedY
     }
    }
+   
    function handleMouse(event) {
     mouseX = event.pageX
     mouseY = event.pageY
